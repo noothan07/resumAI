@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap&family=Roboto:wght@400;500;700&display=swap&family=Asimovian:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+label,button,.f{
+    font-family:Roboto;
+    font-weight: 500;
+}
+.logo{
+    font-family:Roboto;
+}
+.tagline{
+    font-family:Roboto;
+    font-weight: 500;
+}
+html {
+  scroll-behavior: smooth;
+}
+@layer utilities{
+
+    .label{
+        @apply block text-blue-500 sm:text-xl mb-2 ;
+    }
+    .label2{
+        @apply text-gray-400 p-1 text-sm md:text-lg font-light ;
+    }
+    .form{
+        @apply w-full border border-gray-300 rounded px-4 py-3 sm:py-4 focus:outline-none hover:border-blue-600 bg-[#aedbfd31];
+    }
+    .response-sections{
+        @apply flex flex-col gap-5 sm:gap-10 ;
+    }
+    .response-section{
+        @apply border-1 border-green-400 p-4 sm:p-8 rounded-2xl bg-[#caffcf31];
+    }
+    .gradient{
+        @apply bg-gradient-to-r from-blue-500 to-green-300 bg-clip-text text-transparent;
+    }
+    .response{
+        @apply  flex items-center flex-col justify-center gap-10 w-full h-full lg:px-30 sm:px-10 py-15
+         px-3 bg-gradient-to-t from-blue-50 to-green-50 rounded-t-4xl border-t-1 border-t-gray-400 ;
+    }
+    
+}
