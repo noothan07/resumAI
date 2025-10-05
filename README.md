@@ -7,7 +7,7 @@ A modern web application that **helps job seekers generate personalized cover le
 ## 🚀 Live Demo
 
 Check out the live application here:  
-[🌐 View Live Demo](https://vercel-link.vercel.app)
+[🌐 View Live Demo](https://resumai1.vercel.app)
 
 
 ---
