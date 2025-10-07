@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap&family=Roboto:wght@400;500;700&display=swap&family=Asimovian:wght@400;500;700&display=swap');
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 label,button,.f{
     font-family:Roboto;
@@ -10,34 +11,47 @@ label,button,.f{
 }
 .tagline{
     font-family:Roboto;
-    font-weight: 500;
+    
 }
 html {
   scroll-behavior: smooth;
 }
+html, body, #root {
+  transition:
+    background-color 0.8s ease,
+    color 0.8s ease,
+    border-color 0.2s ease,
+    fill 0.3s ease,
+    stroke 0.5s ease;
+}
+
 @layer utilities{
 
     .label{
-        @apply block text-blue-500 sm:text-xl mb-2 ;
+        @apply block text-blue-400 text-[17px] sm:text-xl mb-2 pl-2 ;
     }
     .label2{
-        @apply text-gray-400 p-1 text-sm md:text-lg font-light ;
+        @apply text-gray-400 dark:text-gray-600 p-1 pl-2 text-sm md:text-lg font-light ;
     }
     .form{
-        @apply w-full border border-gray-300 rounded px-4 py-3 sm:py-4 focus:outline-none hover:border-blue-600 bg-[#aedbfd31];
+        @apply w-full border border-gray-300 dark:border-gray-700 rounded px-5 py-5 sm:py-4 focus:outline-none
+         hover:border-blue-600 active:border-blue-600 dark:hover:border-blue-900 bg-[#aedbfd31] dark:bg-gray-900 dark:text-gray-300;
     }
     .response-sections{
         @apply flex flex-col gap-5 sm:gap-10 ;
     }
     .response-section{
-        @apply border-1 border-green-400 p-4 sm:p-8 rounded-2xl bg-[#caffcf31];
+        @apply border-1 border-green-400 dark:border-green-950 p-4 sm:p-8 rounded-2xl bg-[#caffcf31] dark:bg-[#00ff1104] ;
     }
     .gradient{
         @apply bg-gradient-to-r from-blue-500 to-green-300 bg-clip-text text-transparent;
     }
+    .gradient2{
+        @apply bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent ;
+    }
     .response{
         @apply  flex items-center flex-col justify-center gap-10 w-full h-full lg:px-30 sm:px-10 py-15
-         px-3 bg-gradient-to-t from-blue-50 to-green-50 rounded-t-4xl border-t-1 border-t-gray-400 ;
+         px-3  rounded-t-4xl border-t-1 border-t-gray-400 dark:border-t-gray-600 ;
     }
     
 }

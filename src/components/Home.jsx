@@ -165,9 +165,9 @@ export default function Home() {
  //
 
   return (
-    <section className="response" id="Home">
-      <motion.form onSubmit={handleSubmit}  className="bg-white p-4 md:p-8 rounded-3xl shadow-md w-full space-y-6 mt-5"
-      initial={{y:200,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.5,ease:"easeOut"}} >
+    <section className="response bg-gradient-to-t from-blue-50 to-green-50 dark:from-[#022300] dark:to-[#00032b] " id="Home">
+      <motion.form onSubmit={handleSubmit}  className="bg-white dark:bg-gray-950 p-4 md:p-8 rounded-3xl shadow-md w-full space-y-6 mt-5 border-1 border-gray-300 dark:border-gray-800"
+      initial={{y:200,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:0.5,ease:"easeOut"}} viewport={{ once:true }} >
         {/* Input Field */}
         <div className="grid lg:grid-cols-2 gap-8">
             <div>
@@ -251,7 +251,7 @@ export default function Home() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-4 sm:py-7 rounded-2xl hover:bg-blue-600 transition-colors font-bold text-[15px] sm:text-xl"
+          className="w-full bg-blue-500 dark:bg-blue-800 text-white dark:text-gray-300 py-4 sm:py-7 rounded-2xl hover:bg-blue-600 dark:hover:bg-blue-900 active:scale-[98%] transition-all duration-200 font-bold text-[15px] sm:text-xl"
         >
           <i className="fa-duotone fa-solid fa-wand-magic-sparkles"></i> Generate AI-Powered Resume & Cover Letter
         </button>
@@ -259,22 +259,24 @@ export default function Home() {
       {/* Response Section */}
         <div className="response-container">
           {geminiResponse && (
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200">
+            <div className="bg-white dark:bg-gray-950 rounded-3xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-800">
               {/* Header */}
-              <div className="bg-green-600 text-white py-4 px-6 flex items-center justify-center">
+              <div className="bg-green-600 dark:bg-green-900 text-white dark:text-gray-100 py-4 px-6 flex items-center justify-center">
                 <i className="bi bi-check-circle text-xl mr-2"></i>
                 <h3 className="text-xl font-semibold m-0">AI Generated Results</h3>
               </div>
 
               {/* Body */}
               <div className="p-2 sm:p-10">
-                <div className="gemini-response text-gray-800 leading-relaxed space-y-4">
+                <div className="gemini-response text-gray-800 dark:text-[#daffdf] leading-relaxed space-y-4">
                   {parseAndDisplayResponse(geminiResponse)}
                 </div>
               </div>
             </div>
           )}
         </div>
+
+
 
     </section>
   )

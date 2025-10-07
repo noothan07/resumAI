@@ -21,18 +21,18 @@ const item = {
 export default function Hero() {
   return (
     <motion.section
-      className='h-[77vh] sm:h-[80vh] flex justify-center items-center px-3 -z-10'
+      className='h-[77vh] sm:h-[80vh] flex justify-center items-center px-3 -z-10 '
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ amount: 0.2 }}
+      viewport={{ amount: 0.3 }}
     >
       <div className='flex flex-col justify-center items-center gap-5'>
-        <motion.h1 variants={item} className='tagline text-[30px] w-[350px] text-center sm:w-[650px] sm:text-[40px] lg:w-[850px] lg:text-[50px] hidden sm:block'>
+        <motion.h1 variants={item} className='tagline text-[30px] w-[350px] text-center sm:w-[650px] sm:text-[40px] lg:w-[900px] lg:text-[55px] hidden sm:block font-bold gradient2 leading-tight'>
           An AI-powered <span className='hidden sm:inline'>professional</span> cover letter and resume builder <span className='hidden sm:inline'>for free </span>
         </motion.h1>
 
-        <motion.h1 variants={item} className='tagline text-[30px] w-[350px] text-center sm:w-[650px] sm:text-[40px] lg:w-[850px] lg:text-[50px] block sm:hidden'>
+        <motion.h1 variants={item} className='tagline text-[30px] w-[350px] text-center sm:w-[650px] sm:text-[40px] lg:w-[850px] lg:text-[50px] block sm:hidden font-bold gradient2'>
           An AI-powered <span className='hidden sm:inline'>professional</span> resume and cover letter builder <span className='hidden sm:inline'>for free </span>
         </motion.h1>
 
@@ -43,7 +43,7 @@ export default function Hero() {
         <motion.a 
           variants={item}
           href="#Home" 
-          className='bg-green-400 px-7 py-3 rounded hover:bg-green-500 text-white text-[17px]'
+          className='bg-green-400 px-7 py-3 rounded hover:bg-green-500 text-white dark:text-black text-[17px]'
         >
           Get started
         </motion.a>
