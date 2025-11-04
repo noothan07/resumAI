@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 export default function Home() {
     const [formData, setFormData] = useState({
-    companyName: "",
+    companyName: "Infosys",
     applyingAsA:"Fresher",
     coverLetterTone: "Formal",
-    jobDescription: "",
-    currentResume: "",
+    jobDescription: "Infosys is looking for passionate Web Developers to design and develop responsive, high-performance web applications using HTML, CSS, JavaScript, and modern frameworks like React.js or Node.js. The role involves collaborating with cross-functional teams, integrating APIs, optimizing user experience, and delivering scalable solutions.",
+    currentResume: "Noothan nagala, a passionate Web Developer skilled in HTML, CSS, JavaScript, and React.js. Completed Diploma in Computer Engineering from Andhra Polytechnic College, kakinada (2025). Developed projects like a resumAI Web App and a personal Portfolio Website. Completed internship at STPI Kalpatru COE , assisting in UI design and front-end development. Seeking to join Infosys as a Web Developer to build responsive, user-friendly web applications. Strengths include quick learning, teamwork, and problem-solving.",
   });
 
   const [geminiResponse, setgeminiResponse] = useState("");
@@ -135,11 +135,11 @@ export default function Home() {
                     Check if they exist in the provided resume (if given).  
                     List missing keywords that should be added.  
 
-                    4. ATS Score Estimate (0–100)  
+                    4. ATS Score Estimate (0–100) 
                     Provide a rough ATS match score for the current resume against the job description.  
-                    Explain the reasoning briefly (e.g., missing keywords, formatting issues, irrelevant content).  
+                    Explain the reasoning in briefly (e.g., missing keywords, formatting issues, irrelevant content).  
 
-                    Ensure the response is structured, clear, and easy to display in a React app`;
+                    Ensure the response is structured, clear, and easy to display in a React app and directly give from the cover letter no extra matter give direct response no json format`;
 
       const url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
       const options = {
@@ -174,7 +174,7 @@ export default function Home() {
             <label className="label" htmlFor="companyName"><i className="fa-solid fa-building"></i> Company Name </label>
             <input type="text" name="companyName" value={formData.companyName} onChange={handleChange} placeholder="Enter your name"
             className="form" required/>
-            <div className=" label2">company you are applying to</div>
+            <div className=" label2">enter company you are applying to</div>
             </div>
 
             {/* Dropdown 1 */}
@@ -259,7 +259,7 @@ export default function Home() {
       {/* Response Section */}
         <div className="response-container">
           {geminiResponse && (
-            <div className="bg-white dark:bg-gray-950 rounded-3xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-800">
+            <div className="bg-white dark:bg-gray-950 rounded-3xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-800 pb-5 ">
               {/* Header */}
               <div className="bg-green-600 dark:bg-green-900 text-white dark:text-gray-100 py-4 px-6 flex items-center justify-center">
                 <i className="bi bi-check-circle text-xl mr-2"></i>
