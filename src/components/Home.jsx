@@ -267,7 +267,7 @@ export default function Home() {
               </div>
 
               {/* Body */}
-              <div className="p-2 sm:p-10">
+              <div className="p-2 sm:p-10 h-[600px] w-full overflow-y-scroll">
                 <div className="gemini-response text-gray-800 dark:text-[#daffdf] leading-relaxed space-y-4">
                   {parseAndDisplayResponse(geminiResponse)}
                 </div>
